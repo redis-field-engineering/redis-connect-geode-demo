@@ -1,4 +1,4 @@
-package org.example;
+package redis.geode;
 
 import lombok.Getter;
 import lombok.Setter;

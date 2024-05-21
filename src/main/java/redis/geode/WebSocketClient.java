@@ -1,4 +1,4 @@
-package org.example;
+package redis.geode;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

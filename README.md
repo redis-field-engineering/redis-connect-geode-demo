@@ -5,10 +5,10 @@ to help illustrate how to stream results from Geode to Redis via [Redis Connect]
 
 ## Run Geode
 
-To run Geode, simply use the command:
+To run Geode, run:
 
 ```bash
-docker compose -f ./docker/docker-compose.yml
+./setup_geode.sh
 ```
 
 ## Build the App

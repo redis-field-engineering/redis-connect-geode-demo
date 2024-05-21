@@ -1,4 +1,4 @@
-package org.example;
+package redis.geode;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

@@ -1,4 +1,4 @@
-package org.example;
+package redis.geode;
 
 import org.apache.geode.cache.Region;
 import org.apache.geode.cache.client.ClientCache;
