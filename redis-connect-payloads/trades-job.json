@@ -38,7 +38,7 @@
     "tables": {
       "trades": {
         "initialLoad": {
-          "partitions": 4,
+          "partitions": 1,
           "maxPartitionsPerClusterMember": 1
         },
         "autoConfigColumnsEnabled": true
