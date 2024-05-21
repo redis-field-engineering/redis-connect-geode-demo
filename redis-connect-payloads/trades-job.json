@@ -11,12 +11,12 @@
       },
       {
         "database": {
-          "credentialsDirectoryPath" : "/opt/redislabs/redis-connect/config/samples/credentials",
+          "credentialsDirectoryPath" : "/opt/redislabs/redis-connect/config/credentials",
           "databaseURL": "redis://127.0.0.1:14000",
           "databaseType": "REDIS",
           "customConfiguration": {
             "redis.connection.sslEnabled": false,
-            "truststore": "/opt/redislabs/redis-connect/config/samples/credentials/client-truststore.jks"
+            "truststore": "/opt/redislabs/redis-connect/config/credentials/client-truststore.jks"
           }
         },
         "index": 2,
@@ -28,7 +28,7 @@
   },
   "source": {
     "database": {
-      "credentialsDirectoryPath": "/opt/redislabs/redis-connect/config/samples/credentials",
+      "credentialsDirectoryPath": "/opt/redislabs/redis-connect/config/credentials",
       "databaseType": "GEMFIRE",
       "customConfiguration": {
         "pool.locator.host": "localhost",
