@@ -46,6 +46,7 @@ public class App
                     try {
                         Trade t = TradePipeline.receiveMessage();
                         UUID uuid = UUID.randomUUID();
+                        t.setId(uuid);
                         String key = String.format("trade:%s", uuid);
                         tradeRegion.put(key, t);
                     } catch (Exception e){
