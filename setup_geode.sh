@@ -38,7 +38,7 @@ docker run \
   --entrypoint sh \
   -d apachegeode/geode:"${version}" -c "/geode/scripts/forever"
 
-sleep 60
+sleep 5
 
 mvn clean package
 
