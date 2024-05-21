@@ -1,0 +1,13 @@
+FROM  gemfire/gemfire:9.15.6
+WORKDIR /startup
+COPY . /startup/
+RUN chmod +x /startup/startup.sh
+EXPOSE 10334
+EXPOSE 1099
+EXPOSE 7575
+EXPOSE 7070
+EXPOSE 8080
+EXPOSE 40404
+EXPOSE 41000
+EXPOSE 41001
+ENTRYPOINT [ "sh", "startup.sh" ]
