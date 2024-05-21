@@ -39,7 +39,8 @@ public class App
             }
 
 
-            try(ClientCache cache = new ClientCacheFactory().addPoolLocator(gemfireHost, gemfirePort).create()){
+//            try(ClientCache cache = new ClientCacheFactory().addPoolLocator(gemfireHost, gemfirePort).create()){
+            try(ClientCache cache = new ClientCacheFactory().create()){
                 Region<String, Trade> tradeRegion = cache.<String,Trade>createClientRegionFactory(ClientRegionShortcut.PROXY).create("trades");
                 while(true){
                     try {

@@ -42,7 +42,7 @@ sleep 5
 
 mvn clean package
 
-docker cp cache.xml "${container_name}":cache.xml
+docker cp geode-cache.xml "${container_name}":cache.xml
 docker cp target/Trades2Geode-1.0.jar "${container_name}":Trades2Geode-1.0.jar # deploy so we have access to the POJO on the server
 docker cp jars/gemfire-initial-load-function-0.10.1.jar "${container_name}":gemfire-initial-load-function-0.10.1.jar
 docker cp extlib/gemfire-pojo-1.0.jar "${container_name}":gemfire-pojo-1.0.jar
