@@ -7,7 +7,7 @@
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>LiveTrades2Gemfire</name>
+  <name>LiveTrades2Geode</name>
   <url>http://maven.apache.org</url>
 
   <properties>

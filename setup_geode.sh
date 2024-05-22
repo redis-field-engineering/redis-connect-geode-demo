@@ -9,7 +9,7 @@ cache_server_port="${6:-40404}"
 
 platform="${7:-linux/amd64}"
 
-container_name="gemfire-$version-$(hostname)"
+container_name="geode-$version-$(hostname)"
 
 echo "Creating $container_name docker container."
 IS_RUNNING=$(docker ps --filter name="${container_name}" --format '{{.ID}}')
@@ -45,7 +45,6 @@ mvn clean package
 docker cp geode-cache.xml "${container_name}":cache.xml
 docker cp target/Trades2Geode-1.0.jar "${container_name}":Trades2Geode-1.0.jar # deploy so we have access to the POJO on the server
 docker cp jars/gemfire-initial-load-function-0.10.1.jar "${container_name}":gemfire-initial-load-function-0.10.1.jar
-docker cp extlib/gemfire-pojo-1.0.jar "${container_name}":gemfire-pojo-1.0.jar
 
 echo "Starting locator1, server1 and deploying client function for the load job.."
 docker exec --user root "${container_name}" sh -c "gfsh -e 'start locator --name=locator1 --hostname-for-clients=localhost' -e 'deploy --jar=./Trades2Geode-1.0.jar' -e 'deploy --jar=./gemfire-initial-load-function-0.10.1.jar' -e 'start server --name=server1 --cache-xml-file=./cache.xml --hostname-for-clients=localhost' -e 'list functions'"
