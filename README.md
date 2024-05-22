@@ -61,5 +61,5 @@ curl -X POST "http://localhost:8282/connect/api/v1/job/transition/start/cdc-job/
 To Stream the data from gemfire to Redis, use this _curl_command:
 
 ```bash
-curl -X POST "http://localhost:8282/connect/api/v1/job/transition/start/cdc-job/stream” -H "accept: */*"
+curl -X POST "http://localhost:8282/connect/api/v1/job/transition/start/cdc-job/stream" -H "accept: */*"
 ```
